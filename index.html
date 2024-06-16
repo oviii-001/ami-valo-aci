@@ -37,12 +37,12 @@
         .message.show, .second-message.show, .image.show {
             opacity: 1;
         }
-        .message {
+        .message, .second-message {
             font-size: 48px;
             font-weight: bold;
         }
         .image {
-            width: 200px;
+            width: 400px;
             height: auto;
         }
     </style>
@@ -58,7 +58,7 @@
             document.querySelector('.cow-button').classList.add('hide');
             setTimeout(() => {
                 document.getElementById('message').classList.add('show');
-            }, 1000); // Show first message after 1 second
+            }, 2000); // Show first message after 2 second
             setTimeout(() => {
                 document.getElementById('second-message').classList.add('show');
             }, 3000); // Show second message after 3 seconds
