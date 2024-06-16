@@ -24,6 +24,9 @@
             border: none;
             cursor: pointer;
         }
+        .cow-button.hide {
+            display: none;
+        }
         .message, .second-message, .image {
             margin-top: 20px;
             font-size: 24px;
@@ -48,13 +51,16 @@
 
     <script>
         function showMessages() {
-            document.getElementById('message').classList.add('show');
+            document.querySelector('.cow-button').classList.add('hide');
+            setTimeout(() => {
+                document.getElementById('message').classList.add('show');
+            }, 1000); // Show first message after 1 second
             setTimeout(() => {
                 document.getElementById('second-message').classList.add('show');
-            }, 2000); // Show second message after 2 seconds
+            }, 3000); // Show second message after 3 seconds
             setTimeout(() => {
                 document.getElementById('image').classList.add('show');
-            }, 4000); // Show image after 4 seconds
+            }, 5000); // Show image after 5 seconds
         }
     </script>
 </body>
