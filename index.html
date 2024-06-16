@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Eid Mubarak Website</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        .cow-button {
+            background: url('WhatsApp Image 2024-06-16 at 22.20.58_99cf3086.jpg') no-repeat center center;
+            background-size: contain;
+            width: 200px;
+            height: 200px;
+            border: none;
+            cursor: pointer;
+        }
+        .message, .second-message, .image {
+            margin-top: 20px;
+            font-size: 24px;
+            color: #333;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        .message.show, .second-message.show, .image.show {
+            opacity: 1;
+        }
+        .image {
+            width: 200px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <button class="cow-button" onclick="showMessages()"></button>
+    <div class="message" id="message">EID MUBARAK!</div>
+    <div class="second-message" id="second-message">এবার সালামি দেও🫶</div>
+    <img src="WhatsApp Image 2024-06-16 at 22.20.58_99cf3086.jpg" class="image" id="image" alt="Eid Image">
+
+    <script>
+        function showMessages() {
+            document.getElementById('message').classList.add('show');
+            setTimeout(() => {
+                document.getElementById('second-message').classList.add('show');
+            }, 2000); // Show second message after 2 seconds
+            setTimeout(() => {
+                document.getElementById('image').classList.add('show');
+            }, 4000); // Show image after 4 seconds
+        }
+    </script>
+</body>
+</html>
